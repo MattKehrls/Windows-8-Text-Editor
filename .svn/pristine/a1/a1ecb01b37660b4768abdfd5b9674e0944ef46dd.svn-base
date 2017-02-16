@@ -1,0 +1,102 @@
+﻿<Page
+    x:Class="InClassApp_2_.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:InClassApp_2_"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="Auto" Height="Auto">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <AppBarButton Name="new_btn" Icon="Add" Label="New" HorizontalAlignment="Stretch" Width="Auto" VerticalAlignment="Stretch" FontSize="21"  BorderBrush="Black" BorderThickness="1"/>
+        <AppBarButton Name="open_btn" Icon="Folder" Label="Open" Grid.Column="1" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="21" BorderBrush="Black" BorderThickness="1" Click="open_btn_Click"></AppBarButton>
+        <AppBarButton Name="save_btn" Icon="Save" Grid.Column="2" Label="Save" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="21" BorderBrush="Black" BorderThickness="1" Click="save_btn_Click"></AppBarButton>
+
+        <RichEditBox Name="editBox" Grid.Row="1" Grid.ColumnSpan="3" TextWrapping="Wrap"  AcceptsReturn="True" ></RichEditBox>
+
+
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="3" Background="HotPink" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+            <AutoSuggestBox Name="SearchBox" QueryIcon="Find" PlaceholderText="Search Page for..." Height="30" Width="160" VerticalAlignment="Center" Background="White" ></AutoSuggestBox>
+
+            <Button Name="leftbtn" VerticalAlignment="Stretch" Background="Firebrick" Click="leftbtn_Click">
+                <Button.Content>
+                    <StackPanel>
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1A0;" HorizontalAlignment="Center"></TextBlock>
+
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+
+            <Button Name="centerbtn" VerticalAlignment="Stretch" Background="Firebrick" Click="centerbtn_Click">
+                <Button.Content>
+                    <StackPanel>
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1A1;" HorizontalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+
+            <Button Name="rightbtn" VerticalAlignment="Stretch" Background="Firebrick" Click="rightbtn_Click">
+                <Button.Content>
+                    <StackPanel>
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1A2;" HorizontalAlignment="Center"></TextBlock>
+
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+            <Button Name="boldbtn" VerticalAlignment="Stretch" Background="Firebrick" Click="boldbtn_Click">
+                <Button.Content>
+                    <StackPanel>
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8DD;" HorizontalAlignment="Center"></TextBlock>
+
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+            <Button Name="italicbtn" VerticalAlignment="Top" Background="Firebrick" Height="30" Click="italicbtn_Click">
+                <Button.Content>
+                    <StackPanel>
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8DB;" HorizontalAlignment="Center"></TextBlock>
+
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+            <Button Name="underlinebtn" VerticalAlignment="Top" Background="Firebrick" Height="30" Click="underlinebtn_Click">
+                <Button.Content>
+                    <StackPanel>
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8DC;" HorizontalAlignment="Center"></TextBlock>
+
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+            <Button Name="colorpickerbtn" VerticalAlignment="Stretch" Background="Firebrick">
+                <Button.Content>
+                    <StackPanel>
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE2B1;" HorizontalAlignment="Center"></TextBlock>
+
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+        </StackPanel>
+
+    </Grid>
+</Page>

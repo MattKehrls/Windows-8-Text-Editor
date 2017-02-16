@@ -1,0 +1,132 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:InClassApp_2_"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Controls="using:Coding4Fun.Toolkit.Controls"
+    x:Class="InClassApp_2_.MainPage"
+    mc:Ignorable="d" Width="Auto" Height="Auto">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <AppBarButton x:Name="new_btn" Icon="Add" Label="New" HorizontalAlignment="Stretch" Width="Auto" VerticalAlignment="Stretch" FontSize="21"  BorderBrush="Black" BorderThickness="1" Background="Aqua"/>
+        <AppBarButton x:Name="open_btn" Icon="Folder" Label="Open" Grid.Column="1" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="21" BorderBrush="Black" BorderThickness="1" Click="open_btn_Click" Background="Coral"/>
+        <AppBarButton x:Name="save_btn" Icon="Save" Grid.Column="2" Label="Save" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="21" BorderBrush="Black" BorderThickness="1" Click="save_btn_Click" Background="Gold"/>
+
+        <RichEditBox x:Name="editBox" Grid.Row="1" Grid.ColumnSpan="3" TextWrapping="Wrap"  AcceptsReturn="True" TextChanged="editBox_TextChanged" />
+
+
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="3" Background="HotPink" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="75">
+
+            <StackPanel Width="160" Background="Gray">
+                <TextBox x:Name="SearchBox" PlaceholderText="Search Page for..." Height="30" Width="160" HorizontalAlignment="Left" Background="White" TextChanged="SearchBox_TextChanged" />
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                    <TextBlock x:Name="searchtxtBlock"  Visibility="Collapsed">Items Found:</TextBlock>
+                    <TextBlock x:Name="SearchResultsBlock" Width="25" ></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
+                    <TextBlock Margin="2,5,0,0">Char Count:</TextBlock>
+                    <TextBlock x:Name="TesttextBlock" TextWrapping="Wrap" Text="" Margin="5,5,0,0" Width="25"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+
+                <Button x:Name="leftbtn" Background="Firebrick" VerticalAlignment="Top" Click="leftbtn_Click">
+                        <StackPanel>
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1A0;" HorizontalAlignment="Center" FontSize="20"/>
+
+                        </StackPanel>
+                    </Button>
+
+                <Button x:Name="centerbtn"  Background="Firebrick" VerticalAlignment="Top" Click="centerbtn_Click">
+                        <StackPanel>
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1A1;" HorizontalAlignment="Center" FontSize="20"/>
+                        </StackPanel>
+                    </Button>
+
+
+                <Button x:Name="rightbtn"  Background="Firebrick" VerticalAlignment="Top" Click="rightbtn_Click">
+                        <StackPanel>
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1A2;" HorizontalAlignment="Center" FontSize="20" />
+
+                        </StackPanel>
+                    </Button>
+
+
+                <Button x:Name="boldbtn"  Background="Firebrick" VerticalAlignment="Top" Click="boldbtn_Click">
+                <StackPanel>
+                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8DD;" HorizontalAlignment="Center" FontSize="20"/>
+
+                </StackPanel>
+            </Button>
+
+                <Button x:Name="italicbtn"  Background="Firebrick" VerticalAlignment="Top" Click="italicbtn_Click">
+                <StackPanel>
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8DB;" HorizontalAlignment="Center" FontSize="20"/>
+
+                </StackPanel>
+            </Button>
+
+                <Button x:Name="underlinebtn"  Background="Firebrick" VerticalAlignment="Top" Click="underlinebtn_Click">
+                <StackPanel>
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8DC;" HorizontalAlignment="Center" FontSize="20"/>
+
+                </StackPanel>
+            </Button>
+         
+
+            
+            
+            <Button x:Name="allCapsbtn" VerticalAlignment="Top" Background="Firebrick" Click="allCapsbtn_Click">
+                <StackPanel>
+                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1C8;" HorizontalAlignment="Center" FontSize="20"/>
+
+                </StackPanel>
+            </Button>
+</StackPanel>
+
+            <Button x:Name="colorpickerbtn" Background="Firebrick" VerticalAlignment="Top" Click="colorpickerbtn_Click">
+                <StackPanel>
+                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE2B1;" HorizontalAlignment="Center" FontSize="20"/>
+
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="imgbtn" Background="Firebrick" VerticalAlignment="Top" Click="imgbtn_Click">
+                <StackPanel>
+                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8B9;" HorizontalAlignment="Center" FontSize="20"/>
+
+                </StackPanel>
+            </Button>
+
+
+
+
+        </StackPanel>
+
+        <SplitView x:Name="colorpickerSplitView" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="200"  Grid.Row="1" Grid.Column="1" >
+            <SplitView.Pane>
+                
+                <Controls:ColorPicker x:Name="ColorPicker" ColorChanged="ColorPicker_ColorChanged" Margin="0,0,0,0.333" Width="Auto" Visibility="Visible"/>
+               
+            </SplitView.Pane>
+            
+        </SplitView>
+        
+
+
+    </Grid>
+</Page>
